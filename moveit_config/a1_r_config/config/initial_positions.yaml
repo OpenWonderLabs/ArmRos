@@ -1,0 +1,10 @@
+# Default initial positions for a1_r_urdf's ros2_control fake system
+
+initial_positions:
+  joint1-a1_r: 0
+  joint2-a1_r: 0
+  joint3-a1_r: 0
+  joint4-a1_r: 0
+  joint5-a1_r: 0
+  joint6-a1_r: 0
+  joint7-a1_r: 0

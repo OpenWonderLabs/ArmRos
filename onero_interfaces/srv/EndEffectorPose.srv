@@ -1,0 +1,6 @@
+# 请求部分 (Request)
+# 获取当前位置不需要输入参数，留空即可
+---
+# 响应部分 (Response)
+# 直接使用 ROS 2 标准的 Pose 消息，包含 position (x,y,z) 和 orientation (qw,qx,qy,qz)
+geometry_msgs/Pose pose

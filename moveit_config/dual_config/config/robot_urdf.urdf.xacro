@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="robot_urdf">
+    <xacro:arg name="initial_positions_file" default="initial_positions.yaml" />
+
+    <!-- Import robot urdf file -->
+    <xacro:include filename="$(find onero_description)/urdf/A1_dual/A1_dual.urdf" />
+
+    <!-- Import control_xacro -->
+    <xacro:include filename="a1_l_urdf.ros2_control.xacro" />
+    <xacro:include filename="a1_r_urdf.ros2_control.xacro" />
+
+
+    <xacro:a1_l_urdf_ros2_control name="Fake_left_arm_controller" initial_positions_file="$(arg initial_positions_file)"/>
+    <xacro:a1_r_urdf_ros2_control name="Fake_right_arm_controller" initial_positions_file="$(arg initial_positions_file)"/>
+
+</robot>

@@ -1,0 +1,31 @@
+onero_driver_node:
+  ros__parameters:
+    # 机械臂型号
+    robot_model: "A1_dual"
+
+    # 当前臂
+    symbol_left: "a1_l"
+    symbol_right: "a1_r"
+
+    #串口号
+    device_left: "/dev/ttyACM0"
+    device_right: "/dev/ttyACM1"
+
+    # 双臂共享同一摆放方向，可选: "horizontal" 或 "vertical"
+    mount_orientation: "vertical"
+    
+    # 自由度
+    dof: 14
+    
+    # 状态发布频率（Hz）
+    state_pub_rate: 100.0
+    
+    # MIT力控模式默认参数
+    mit_mode:
+
+      # 目标PD参数（7自由度）- 与 arm_control 保持一致
+      left_kp_values: [150.0, 150.0, 150.0, 150.0, 30.0, 30.0, 30.0]
+      left_kd_values: [4.0, 4.0, 4.0, 4.0, 1.0, 1.0, 1.0]
+
+      right_kp_values: [150.0, 150.0, 150.0, 150.0, 30.0, 30.0, 30.0]
+      right_kd_values: [4.0, 4.0, 4.0, 4.0, 1.0, 1.0, 1.0]

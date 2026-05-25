@@ -1,0 +1,51 @@
+# OMPL Planning Pipeline Configuration
+planning_plugin: ompl_interface/OMPLPlanner
+
+# Planning Request Adapters (按执行顺序列出)
+# 注意：必须使用 default_planner_request_adapters（不是 default_planning_request_adapters）
+request_adapters: >-
+  default_planner_request_adapters/AddTimeOptimalParameterization
+  default_planner_request_adapters/ResolveConstraintFrames
+  default_planner_request_adapters/FixWorkspaceBounds
+  default_planner_request_adapters/FixStartStateBounds
+  default_planner_request_adapters/FixStartStateCollision
+  default_planner_request_adapters/FixStartStatePathConstraints
+
+response_adapters: >-
+
+start_state_max_bounds_error: 0.1
+
+# Time Optimal Trajectory Generation 参数配置
+# 参数放在顶层，由 MoveItConfigsBuilder 自动添加命名空间前缀
+path_tolerance: 0.1        # 路径容差（米）
+resample_dt: 0.01          # 重采样时间步长（秒），0.01秒 = 100Hz
+min_angle_change: 0.001    # 最小角度变化（弧度）
+
+# OMPL Planner Configurations
+planner_configs:
+      RRTConnect:
+        type: "geometric::RRTConnect"
+        range: 0.0
+      RRT:
+        type: "geometric::RRT"
+        range: 0.0
+        goal_bias: 0.05
+      RRTstar:
+        type: "geometric::RRTstar"
+        range: 0.0
+        goal_bias: 0.05
+      TRRT:
+        type: "geometric::TRRT"
+        range: 0.0
+        goal_bias: 0.05
+      PRM:
+        type: "geometric::PRM"
+        max_nearest_neighbors: 10
+
+arm:
+  planner_configs:
+    - RRTConnect
+    - RRT
+    - RRTstar
+    - TRRT
+    - PRM
