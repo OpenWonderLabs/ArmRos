@@ -1,0 +1,31 @@
+woan_driver_node:
+  ros__parameters:
+    # 机械臂型号
+    robot_model: "A1_dual"
+
+    # 当前臂
+    symbol_left: "a1_l"
+    symbol_right: "a1_r"
+
+    #串口号
+    device_left: "/dev/ttyACM0"
+    device_right: "/dev/ttyACM1"
+    
+    # 自由度
+    dof: 14
+    
+    # 状态发布频率（Hz）
+    state_pub_rate: 100.0
+    
+    # MIT力控模式默认参数
+    mit_mode:
+
+      # 目标PD参数（7自由度）- 与 arm_control 保持一致
+      left_kp_values: [200.0, 200.0, 150.0, 100.0, 20.0, 20.0, 20.0]
+      left_kd_values: [8.0, 8.0, 5.0, 2.0, 0.2, 0.2, 0.2]
+
+      right_kp_values: [300.0, 300.0, 210.0, 210.0, 80.0, 80.0, 80.0]
+      right_kd_values: [2.0, 2.0, 1.5, 1.5, 0.8, 0.8, 0.8]
+
+      #主从臂的PD：200.0, 200.0, 150.0, 100.0, 20.0, 20.0, 20.0
+      #8.0, 8.0, 5.0, 2.0, 0.2, 0.2, 0.2

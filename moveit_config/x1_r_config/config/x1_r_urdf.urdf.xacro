@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="x1_r_urdf">
+    <xacro:arg name="initial_positions_file" default="initial_positions.yaml" />
+
+    <!-- Import x1_r_urdf urdf file -->
+    <xacro:include filename="$(find woan_description)/urdf/v3.2/damiao_right.urdf" />
+
+    <!-- Import control_xacro -->
+    <xacro:include filename="x1_r_urdf.ros2_control.xacro" />
+
+
+    <xacro:x1_r_urdf_ros2_control name="FakeSystem" initial_positions_file="$(arg initial_positions_file)"/>
+
+</robot>

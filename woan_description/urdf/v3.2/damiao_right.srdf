@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<robot name="x1_r_urdf">
+  <!-- 过滤父子/相邻 link 的自碰撞对 -->
+  <disable_collisions link1="base_link-r" link2="Link1-r" reason="Adjacent"/>
+  <disable_collisions link1="Link1-r" link2="Link2-r" reason="Adjacent"/>
+  <disable_collisions link1="Link2-r" link2="Link3-r" reason="Adjacent"/>
+  <disable_collisions link1="Link3-r" link2="Link4-r" reason="Adjacent"/>
+  <disable_collisions link1="Link4-r" link2="Link5-r" reason="Adjacent"/>
+  <disable_collisions link1="Link5-r" link2="Link6-r" reason="Adjacent"/>
+  <disable_collisions link1="Link6-r" link2="Link7-r" reason="Adjacent"/>
+  <disable_collisions link1="Link7-r" link2="right_load" reason="Adjacent"/>
+</robot>

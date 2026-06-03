@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="x1_r_gazebo">
+
+    <!-- 为Gazebo仿真指定网格文件路径前缀为file:// -->
+    <xacro:arg name="mesh_prefix" default="file://$(find woan_description)" />
+
+    <!-- 将机械臂固定到世界坐标系 -->
+    <link name="world"/>
+    <joint name="fixed" type="fixed">
+        <parent link="world"/>
+        <child link="base_link-r"/>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+    </joint>
+
+    <!-- 导入x1_r机械臂模型 -->
+    <xacro:include filename="$(find woan_description)/urdf/v3.2/x1_r.urdf.xacro"/>
+
+    <!-- ========== Gazebo属性设置 ========== -->
+    
+    <gazebo reference="base_link-r">
+        <self_collide>false</self_collide>
+        <gravity>false</gravity>
+    </gazebo>
+    
+    <gazebo reference="Link1-r">
+        <material>Gazebo/White</material>
+        <self_collide>false</self_collide>
+        <gravity>false</gravity>
+    </gazebo>
+    
+    <gazebo reference="Link2-r">
+        <material>Gazebo/White</material>
+        <gravity>false</gravity>
+    </gazebo>
+    
+    <gazebo reference="Link3-r">
+        <material>Gazebo/White</material>
+        <gravity>false</gravity>
+    </gazebo>
+    
+    <gazebo reference="Link4-r">
+        <material>Gazebo/White</material>
+        <gravity>false</gravity>
+    </gazebo>
+    
+    <gazebo reference="Link5-r">
+        <material>Gazebo/White</material>
+        <gravity>false</gravity>
+    </gazebo>
+    
+    <gazebo reference="Link6-r">
+        <material>Gazebo/White</material>
+        <gravity>false</gravity>
+    </gazebo>
+    
+    <gazebo reference="Link7-r">
+        <material>Gazebo/White</material>
+        <gravity>false</gravity>
+    </gazebo>
+
+    <gazebo>
+        <self_collide>true</self_collide>
+    </gazebo>
+
+
+</robot>
+

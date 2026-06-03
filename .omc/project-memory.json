@@ -1,0 +1,216 @@
+{
+  "version": "1.0.0",
+  "lastScanned": 1780479021028,
+  "projectRoot": "/home/woan/A1_sdk/ros/ArmRos",
+  "techStack": {
+    "languages": [],
+    "frameworks": [],
+    "packageManager": null,
+    "runtime": null
+  },
+  "build": {
+    "buildCommand": null,
+    "testCommand": null,
+    "lintCommand": null,
+    "devCommand": null,
+    "scripts": {}
+  },
+  "conventions": {
+    "namingStyle": null,
+    "importStyle": null,
+    "testPattern": null,
+    "fileOrganization": null
+  },
+  "structure": {
+    "isMonorepo": false,
+    "workspaces": [],
+    "mainDirectories": [],
+    "gitBranches": {
+      "defaultBranch": "main",
+      "branchingStrategy": null
+    }
+  },
+  "customNotes": [],
+  "directoryMap": {
+    "LICENSES": {
+      "path": "LICENSES",
+      "purpose": null,
+      "fileCount": 2,
+      "lastAccessed": 1780479021017,
+      "keyFiles": [
+        "LICENSE",
+        "NOTICE"
+      ]
+    },
+    "moveit_config": {
+      "path": "moveit_config",
+      "purpose": null,
+      "fileCount": 1,
+      "lastAccessed": 1780479021019,
+      "keyFiles": [
+        "README_CN.md"
+      ]
+    },
+    "onero_bringup": {
+      "path": "onero_bringup",
+      "purpose": null,
+      "fileCount": 3,
+      "lastAccessed": 1780479021019,
+      "keyFiles": [
+        "CMakeLists.txt",
+        "README_CN.md",
+        "package.xml"
+      ]
+    },
+    "onero_control": {
+      "path": "onero_control",
+      "purpose": null,
+      "fileCount": 3,
+      "lastAccessed": 1780479021019,
+      "keyFiles": [
+        "CMakeLists.txt",
+        "README_CN.md",
+        "package.xml"
+      ]
+    },
+    "onero_description": {
+      "path": "onero_description",
+      "purpose": null,
+      "fileCount": 3,
+      "lastAccessed": 1780479021020,
+      "keyFiles": [
+        "CMakeLists.txt",
+        "README_CN.md",
+        "package.xml"
+      ]
+    },
+    "onero_driver": {
+      "path": "onero_driver",
+      "purpose": null,
+      "fileCount": 3,
+      "lastAccessed": 1780479021020,
+      "keyFiles": [
+        "CMakeLists.txt",
+        "README_CN.md",
+        "package.xml"
+      ]
+    },
+    "onero_examples": {
+      "path": "onero_examples",
+      "purpose": null,
+      "fileCount": 3,
+      "lastAccessed": 1780479021020,
+      "keyFiles": [
+        "CMakeLists.txt",
+        "README_CN.md",
+        "package.xml"
+      ]
+    },
+    "onero_gazebo": {
+      "path": "onero_gazebo",
+      "purpose": null,
+      "fileCount": 3,
+      "lastAccessed": 1780479021020,
+      "keyFiles": [
+        "CMakeLists.txt",
+        "README_CN.md",
+        "package.xml"
+      ]
+    },
+    "onero_install": {
+      "path": "onero_install",
+      "purpose": null,
+      "fileCount": 2,
+      "lastAccessed": 1780479021021,
+      "keyFiles": [
+        "CMakeLists.txt",
+        "package.xml"
+      ]
+    },
+    "onero_interfaces": {
+      "path": "onero_interfaces",
+      "purpose": null,
+      "fileCount": 3,
+      "lastAccessed": 1780479021021,
+      "keyFiles": [
+        "CMakeLists.txt",
+        "README_CN.md",
+        "package.xml"
+      ]
+    },
+    "onero_control/src": {
+      "path": "onero_control/src",
+      "purpose": "Source code",
+      "fileCount": 2,
+      "lastAccessed": 1780479021022,
+      "keyFiles": [
+        "onero_control.cpp",
+        "onero_control_dual.cpp"
+      ]
+    },
+    "onero_driver/config": {
+      "path": "onero_driver/config",
+      "purpose": "Configuration files",
+      "fileCount": 3,
+      "lastAccessed": 1780479021023,
+      "keyFiles": [
+        "a1_dual_driver.yaml",
+        "a1_l_driver.yaml",
+        "a1_r_driver.yaml"
+      ]
+    },
+    "onero_driver/lib": {
+      "path": "onero_driver/lib",
+      "purpose": "Library code",
+      "fileCount": 2,
+      "lastAccessed": 1780479021023,
+      "keyFiles": [
+        "README.md",
+        "lib_install.sh"
+      ]
+    },
+    "onero_driver/src": {
+      "path": "onero_driver/src",
+      "purpose": "Source code",
+      "fileCount": 1,
+      "lastAccessed": 1780479021023,
+      "keyFiles": [
+        "onero_driver.cpp"
+      ]
+    },
+    "onero_examples/src": {
+      "path": "onero_examples/src",
+      "purpose": "Source code",
+      "fileCount": 10,
+      "lastAccessed": 1780479021023,
+      "keyFiles": [
+        "drag_teaching_node.cpp",
+        "force_position_control_demo.cpp",
+        "move_api_all.cpp"
+      ]
+    },
+    "onero_gazebo/config": {
+      "path": "onero_gazebo/config",
+      "purpose": "Configuration files",
+      "fileCount": 3,
+      "lastAccessed": 1780479021024,
+      "keyFiles": [
+        "a1_dual_gazebo_description.urdf.xacro",
+        "a1_l_gazebo_description.urdf.xacro",
+        "a1_r_gazebo_description.urdf.xacro"
+      ]
+    },
+    "onero_install/scripts": {
+      "path": "onero_install/scripts",
+      "purpose": "Build/utility scripts",
+      "fileCount": 2,
+      "lastAccessed": 1780479021024,
+      "keyFiles": [
+        "moveit2_install.sh",
+        "ros2_install.sh"
+      ]
+    }
+  },
+  "hotPaths": [],
+  "userDirectives": []
+}

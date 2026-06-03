@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="a1_r_gazebo">
+
+    <!-- 将机械臂固定到世界坐标系 -->
+    <link name="world"/>
+    <joint name="fixed" type="fixed">
+        <parent link="world"/>
+        <child link="base_link"/>
+    </joint>
+
+    <!-- ========== 机械臂模型定义（来自a1_r.urdf.xacro） ========== -->
+    
+    <!-- 导入a1_r的URDF模型（xacro版本，包含ros2_control配置） -->
+    <xacro:include filename="$(find woan_description)/urdf/A1/a1_r.urdf.xacro" />
+    
+    <!-- ========== Gazebo属性设置 ========== -->
+    
+    <gazebo reference="base_link">
+        <self_collide>false</self_collide>
+        <gravity>false</gravity>
+    </gazebo>
+    
+    <gazebo reference="Link1">
+        <material>Gazebo/White</material>
+        <self_collide>false</self_collide>
+        <gravity>false</gravity>
+    </gazebo>
+    
+    <gazebo reference="Link2">
+        <material>Gazebo/White</material>
+        <self_collide>false</self_collide>
+        <gravity>false</gravity>
+    </gazebo>
+    
+    <gazebo reference="Link3">
+        <material>Gazebo/White</material>
+        <self_collide>false</self_collide>
+        <gravity>false</gravity>
+    </gazebo>
+    
+    <gazebo reference="Link4">
+        <material>Gazebo/White</material>
+        <self_collide>false</self_collide>
+        <gravity>false</gravity>
+    </gazebo>
+    
+    <gazebo reference="Link5">
+        <material>Gazebo/White</material>
+        <self_collide>false</self_collide>
+        <gravity>false</gravity>
+    </gazebo>
+    
+    <gazebo reference="Link6">
+        <material>Gazebo/White</material>
+        <self_collide>false</self_collide>
+        <gravity>false</gravity>
+    </gazebo>
+    
+    <gazebo reference="Link7">
+        <material>Gazebo/White</material>
+        <self_collide>false</self_collide>
+        <gravity>false</gravity>
+    </gazebo>
+
+    <gazebo>
+        <self_collide>true</self_collide>
+    </gazebo>
+
+    <!-- ros2_control配置已移至a1_r.urdf.xacro中 -->
+
+    <!-- 加载ros2_control插件 -->
+    <gazebo>
+        <plugin filename="libgazebo_ros2_control.so" name="gazebo_ros2_control">
+            <parameters>$(find a1_r_config)/config/ros2_controllers.yaml</parameters>
+            <robot_param>robot_description</robot_param>
+            <robot_param_node>robot_state_publisher</robot_param_node>
+        </plugin>
+    </gazebo>
+
+</robot>
