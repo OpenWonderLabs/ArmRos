@@ -1,0 +1,19 @@
+.gitignore
+  s_c0e94608659581::t_cb64bb5aeadaae 6
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.1",
+  "base_commit_sha": "c4c8b374122e91697c75c62b36af44145335d52c",
+  "prompts": {},
+  "sessions": {
+    "s_c0e94608659581": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "3f0bdab4-11f5-4933-a9bb-b2db229cf5cd",
+        "model": "claude-opus-4-7"
+      },
+      "human_author": "songan <songan@wondertechlabs.com>"
+    }
+  }
+}
