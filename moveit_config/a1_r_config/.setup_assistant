@@ -1,6 +1,6 @@
 moveit_setup_assistant_config:
   urdf:
-    package: woan_description
+    package: onero_description
     relative_path: urdf/A1/a1_r.urdf
   srdf:
     relative_path: config/a1_r_urdf.srdf

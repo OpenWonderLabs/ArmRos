@@ -1,0 +1,8 @@
+# 请求部分（Request）：空
+---
+# 响应部分（Response）
+# 单臂 / 双臂的具体话题名已经区分了左右臂；这里直接返回 Pose 不带 frame_id。
+geometry_msgs/Pose pose
+bool success
+int32 error_code
+string message

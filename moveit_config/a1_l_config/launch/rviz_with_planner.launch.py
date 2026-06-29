@@ -98,9 +98,9 @@ def generate_launch_description():
     )
 
     moveit_planner_node = Node(
-        package="woan_control",
-        executable="woan_control_node",
-        name="woan_control_node",
+        package="onero_control",
+        executable="onero_control_node",
+        name="onero_control_node",
         output="screen",
         emulate_tty=True,
         parameters=[
