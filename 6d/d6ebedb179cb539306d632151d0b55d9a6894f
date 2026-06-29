@@ -1,0 +1,27 @@
+onero_examples/src/dual_arm_drag_teaching_node.cpp
+  s_469a4b456a1adc::t_cf86c45eacf850 45,47,51
+  s_469a4b456a1adc::t_24af1fbe244342 43-44
+  s_469a4b456a1adc::t_5b46cfba959056 46
+  s_469a4b456a1adc::t_ca86294bbd74d4 48-50
+  s_469a4b456a1adc::t_6c2118006eee59 52-53
+onero_examples/src/move_api_all.cpp
+  s_469a4b456a1adc::t_cf86c45eacf850 21
+  s_469a4b456a1adc::t_7deeb99d37cc88 19-20
+  s_469a4b456a1adc::t_3fa3d579a9c2c4 22-24
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.3",
+  "base_commit_sha": "6dd6ebedb179cb539306d632151d0b55d9a6894f",
+  "prompts": {},
+  "sessions": {
+    "s_469a4b456a1adc": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019f12c7-32c7-7420-a637-81e73ccf797f",
+        "model": "gpt-5.5"
+      },
+      "human_author": "songan <songan@onerobot.com>"
+    }
+  }
+}
