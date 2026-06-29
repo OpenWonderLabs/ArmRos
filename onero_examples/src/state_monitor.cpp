@@ -14,7 +14,15 @@
 using namespace std::chrono_literals;
 using std::placeholders::_1;
 
-/****************************************创建类************************************/ 
+/**
+ * @brief 机械臂状态监控示例节点
+ *
+ * 在单臂 driver 启动后运行：
+ *   ros2 launch onero_driver a1_l_driver.launch.py
+ *   ros2 run onero_examples state_monitor
+ *
+ * 订阅 /onero_arm/arm_state，持续打印关节位置、速度、力矩和末端位姿。
+ */
 class StateMonitor: public rclcpp::Node
 {
   public:

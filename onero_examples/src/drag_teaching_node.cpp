@@ -34,6 +34,18 @@ extern "C" void dragTeachingSignalHandler(int) {
     g_drag_shutdown_requested.store(true);
 }
 
+/**
+ * @brief 单臂拖动示教节点
+ *
+ * 本示例直接使用 SDK 控制机械臂；不要同时启动 onero_driver 控制同一设备。
+ *
+ * 单臂运行：
+ *   ros2 launch onero_driver a1_l_driver.launch.py
+ *   ros2 run onero_examples drag_teaching_node
+ * 注意：实体机运行前请确认机械臂采用单臂安装方式；双臂安装方式需先重新评估拖动轨迹，避免与桌面干涉。
+ *
+ * 通过 /drag_teaching_cmd 控制开始、停止和回放拖动示教轨迹。
+ */
 class DragTeachingNode : public rclcpp::Node {
 public:
     DragTeachingNode() : Node("drag_teaching_node") {

@@ -270,6 +270,22 @@ ONERO_API int onero_movep(onero_handle handle,
                             double speed_scale,
                             uint8_t trajectory_connect);
 
+/**
+ * 连续点 movep：依次经过 N 个笛卡尔位姿，关节空间三次样条平滑。
+ * 与单点 onero_movep 的区别：不支持 trajectory_connect，调用前会先执行已缓冲段。
+ * 任一点 IK 失败会跳过该点并打印，剩余点继续。
+ *
+ * @param handle      机械臂句柄
+ * @param poses       位姿数组指针
+ * @param num_poses   数组长度
+ * @param speed_scale 速度缩放（0 视为 1.0；区间 [0.01, 5.0]）
+ * @return 0 成功；负值为错误码（IK 全失败返回 IK_FAILED）
+ */
+ONERO_API int onero_movep_via_points(onero_handle handle,
+                                     const onero_pose_t* poses,
+                                     size_t num_poses,
+                                     double speed_scale);
+
 // --- Buffer Management ---
 
 ONERO_API int onero_execute_buffered_trajectory(onero_handle handle);

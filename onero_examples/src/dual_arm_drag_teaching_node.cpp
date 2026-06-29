@@ -40,6 +40,17 @@ extern "C" void dualDragTeachingSignalHandler(int) {
     g_dual_drag_shutdown_requested.store(true);
 }
 
+/**
+ * @brief 双臂拖动示教节点
+ *
+ * 本示例直接使用 SDK 控制两臂；不要同时启动 onero_driver 控制同一设备。
+ *
+ * 双臂运行：
+ *   ros2 launch onero_driver a1_dual_driver.launch.py
+ *   ros2 run onero_examples dual_arm_drag_teaching_node
+ *
+ * 通过 /dual_drag_teaching_cmd 控制开始、停止和回放双臂拖动示教轨迹。
+ */
 class DualArmDragTeachingNode : public rclcpp::Node {
 public:
     DualArmDragTeachingNode() : Node("dual_arm_drag_teaching_node") {

@@ -26,6 +26,7 @@
 - `movej_demo`：关节空间运动示例
 - `movel_demo`：笛卡尔空间直线运动示例
 - `movep_demo`：位姿透传示例
+- `movep_via_points_demo`：MoveP 连续途经点示例（通过 driver 话题下发）
 - `move_all`：所有 Move API 顺序执行示例（C++）
 - `move_api_all_py`：所有 Move API 顺序执行示例（Python）
 - `trajectory_connect_demo`：轨迹连接演示（C++）
@@ -96,7 +97,24 @@ ros2 run onero_examples movep_demo
 - OneroArm 的 MoveP 通过 IK 转换为关节运动，适用于单次位姿控制。
 - `speed_scale` 建议设置在 `0.1~1.0` 区间内。
 
-### 2.4 Move All 顺序执行示例
+### 2.4 MoveP Via Points 连续途经点示例
+
+运行命令：
+
+```bash
+ros2 run onero_examples movep_via_points_demo
+```
+
+该示例只发布 `/onero_arm/movep` 话题，默认配合 `ros2 launch onero_driver a1_l_driver.launch.py` 使用。示例会连续下发 5 个已在 sim 中验证的末端位姿：前 4 个点使用 `trajectory_connect=1` 缓冲，最后 1 个点使用 `trajectory_connect=0` 触发驱动执行整段连续轨迹。
+
+常用参数：
+
+```bash
+ros2 run onero_examples movep_via_points_demo --ros-args \
+  -p speed_scale:=1.2
+```
+
+### 2.5 Move All 顺序执行示例
 
 该示例用于顺序执行 MoveJ → MoveL → MoveP。
 
@@ -113,7 +131,7 @@ ros2 run onero_examples move_api_all_py
 执行成功后，系统会在前一个动作完成后再执行下一个动作，以保证执行顺序明确。
 ![image](doc/onero_examples5.png)
 
-### 2.5 轨迹连接示例
+### 2.6 轨迹连接示例
 
 `trajectory_connect` 参数用于将多段轨迹平滑地拼接为一个整体动作：
 
@@ -139,7 +157,7 @@ ros2 run onero_examples trajectory_connect_demo_py
 运行后将以 MoveJ → MoveL → MoveP 的顺序演示混合轨迹连接效果。
 ![image](doc/onero_examples6.png)
 
-### 2.6 状态监控示例
+### 2.7 状态监控示例
 
 运行命令：
 
@@ -150,7 +168,7 @@ ros2 run onero_examples state_monitor
 节点运行后会实时输出机械臂状态信息。
 ![image](doc/onero_examples7.png)
 
-### 2.7 拖动示教示例
+### 2.8 拖动示教示例
 
 运行命令：
 
@@ -165,7 +183,7 @@ ros2 run onero_examples drag_teaching_node
 
 ![image](doc/onero_examples8.png)
 
-### 2.8 双臂综合示例
+### 2.9 双臂综合示例
 
 运行命令：
 
@@ -183,7 +201,7 @@ ros2 run onero_examples dual_arm_demo
 2. 发布 `/onero_arm/left_arm/movej`，演示双臂模式下单独控制左臂。
 3. 发布 `/onero_arm/right_arm/movej`，演示双臂模式下单独控制右臂。
 
-### 2.9 双臂拖动示教示例
+### 2.10 双臂拖动示教示例
 
 运行命令：
 
@@ -215,6 +233,7 @@ onero_examples/
     ├── movej_demo.cpp                  # MoveJ 示例
     ├── movel_demo.cpp                  # MoveL 示例
     ├── movep_demo.cpp                  # MoveP 示例
+    ├── movep_via_points_demo.cpp       # MoveP 连续途经点示例
     ├── state_monitor.cpp               # 状态监控示例
     ├── trajectory_connect_demo.cpp     # 轨迹连接示例
     └── trajectory_connect_demo.py      # 轨迹连接示例（Python）

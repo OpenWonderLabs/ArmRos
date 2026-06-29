@@ -68,6 +68,15 @@ ament_target_dependencies(movep_demo
   onero_driver
 )
 
+# MoveP连续途经点示例（通过 driver 话题下发）
+add_executable(movep_via_points_demo src/movep_via_points_demo.cpp)
+ament_target_dependencies(movep_via_points_demo
+  rclcpp
+  geometry_msgs
+  onero_interfaces
+  onero_driver
+)
+
 # 状态监控示例
 add_executable(state_monitor src/state_monitor.cpp)
 ament_target_dependencies(state_monitor
@@ -147,6 +156,7 @@ install(TARGETS
   movej_demo
   movel_demo
   movep_demo
+  movep_via_points_demo
   state_monitor
   trajectory_connect_demo
   drag_teaching_node

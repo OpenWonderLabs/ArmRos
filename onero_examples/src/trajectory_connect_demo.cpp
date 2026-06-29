@@ -1,7 +1,6 @@
 // SPDX-License-Identifier: MIT
 // Copyright (c) 2026 OneRobotics (Shenzhen) Co., Ltd.
 
-// 仅适用于 a1_l
 #include <rclcpp/rclcpp.hpp>
 #include "onero_interfaces/msg/command_result.hpp"
 #include "onero_interfaces/msg/move_j.hpp"
@@ -13,6 +12,16 @@
 
 using namespace std::chrono_literals;
 
+/**
+ * @brief 轨迹连接示例节点
+ *
+ * 仅适用于 a1_l 单臂模式：
+ *   ros2 launch onero_driver a1_l_driver.launch.py
+ *   ros2 run onero_examples trajectory_connect_demo
+ * 注意：实体机运行前请确认机械臂采用单臂安装方式；双臂安装方式需先重新评估轨迹，避免与桌面干涉。
+ *
+ * 演示使用 trajectory_connect 缓冲 MoveJ、MoveL，并用 MoveP 触发混合轨迹执行。
+ */
 class TrajectoryConnectDemo : public rclcpp::Node
 {
 public:

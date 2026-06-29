@@ -12,7 +12,11 @@ using namespace std::chrono_literals;
 /**
  * @brief 双臂综合示例节点
  *
- * 仅在双臂模式（a1_dual_driver.launch.py）下运行。按顺序演示三段动作：
+ * 仅在双臂模式（a1_dual_driver.launch.py）下运行：
+ *   ros2 launch onero_driver a1_dual_driver.launch.py
+ *   ros2 run onero_examples dual_arm_demo
+ *
+ * 按顺序演示三段动作：
  *   1. 双臂同步运动     —— 发布 DualMoveJ 到 /onero_arm/dual_arm/movej
  *   2. 双臂下单独控左臂 —— 发布 MoveJ 到 /onero_arm/left_arm/movej
  *   3. 双臂下单独控右臂 —— 发布 MoveJ 到 /onero_arm/right_arm/movej

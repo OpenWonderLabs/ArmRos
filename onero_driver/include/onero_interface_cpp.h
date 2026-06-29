@@ -158,6 +158,7 @@ public:
     int movej(const JointArray& target, double speed_scale = 1.0, uint8_t trajectory_connect = 0);
     int movel(const Pose& pose, double speed_scale = 1.0, uint8_t trajectory_connect = 0);
     int movep(const Pose& pose, double speed_scale = 1.0, uint8_t trajectory_connect = 0);
+    int movep_via_points(const std::vector<Pose>& poses, double speed_scale = 1.0);
     double estimate_movej_duration(const JointArray& target, double speed_scale = 1.0);
 
     int execute_buffered_trajectory();

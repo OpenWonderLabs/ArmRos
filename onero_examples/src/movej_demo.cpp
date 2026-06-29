@@ -10,8 +10,13 @@ using namespace std::chrono_literals;
 
 /**
  * @brief MoveJ示例节点
- * 
- * 演示如何使用MoveJ API控制机械臂在关节空间运动。
+ *
+ * 仅在单臂模式下运行：
+ *   ros2 launch onero_driver a1_l_driver.launch.py
+ *   ros2 run onero_examples movej_demo
+ * 注意：实体机运行前请确认机械臂采用单臂安装方式；双臂安装方式需先重新评估轨迹，避免与桌面干涉。
+ *
+ * 演示如何使用 MoveJ API 控制机械臂在关节空间运动。
  */
 class MoveJDemo : public rclcpp::Node {
 public:
